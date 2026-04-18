@@ -15,11 +15,6 @@ const SUGGESTIONS: Suggestion[] = [
     query: 'Give me a full investment analysis of AAPL',
   },
   {
-    mode: 'agent',
-    title: 'Risks & opportunities',
-    query: 'What are the main risks and opportunities for NVDA right now?',
-  },
-  {
     mode: 'search',
     title: 'Knowledge base',
     query: 'earnings guidance and margins',
@@ -47,7 +42,7 @@ export function EmptyState({ onPick }: EmptyStateProps) {
         </p>
       </div>
 
-      <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
         {SUGGESTIONS.map((s, i) => {
           const Icon = s.mode === 'agent' ? BrainCircuit : Search;
           const accent =
